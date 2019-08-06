@@ -22,6 +22,8 @@ import java.io.Serializable;
     @Column(nullable =false)
     private String regTime;
 
+    public User(){}
+
     public User(String userName,String passWord,String email,String nickName,String regTime){
         this.userName = userName;
         this.passWord = passWord;
