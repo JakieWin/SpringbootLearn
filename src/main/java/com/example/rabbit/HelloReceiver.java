@@ -6,7 +6,8 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
 
 @Component
-@RabbitListener(queues="object")
+//需要监听发送方所填写的队列名称
+@RabbitListener(queues="objectI")
 @RabbitListener(queues = "hello")
 public class HelloReceiver {
     @RabbitHandler

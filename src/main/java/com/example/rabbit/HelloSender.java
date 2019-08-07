@@ -22,6 +22,7 @@ public class HelloSender {
     public void sendUser(){
         User user = userRepository.findByUserName("aa1");
         System.out.println("Sender:aa1"+user.getUserName()+"\t"+user.getEmail());
-        this.amqpTemplate.convertAndSend("object",user);
+        //此处需要填写一个已经创建的队列名称
+        this.amqpTemplate.convertAndSend("objectI",user);
     }
 }

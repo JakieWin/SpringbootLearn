@@ -10,4 +10,9 @@ public class RabbitConfig {
     public Queue Queue(){
         return new Queue("hello");
     }
+    @Bean
+    public Queue objectO(){
+        //这是创建的队列名称
+        return new Queue("objectI");
+    }
 }
